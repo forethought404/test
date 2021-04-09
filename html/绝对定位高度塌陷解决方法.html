@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            border: 1px dashed red;
+            position: relative;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p class="son"></p>
+    </div>
+    <script>
+        window.onload = function () {
+            var h = document.getElementsByClassName("son")[0].offsetHeight;
+            document.getElementsByClassName("box")[0].style.height = h + 'px';
+
+        }
+    </script>
+</body>
+
+</html>
